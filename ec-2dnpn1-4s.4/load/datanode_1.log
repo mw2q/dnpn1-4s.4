@@ -1,0 +1,190 @@
+2015-08-22 02:14:36 EDT [25188]: [1-1] user=,db=,app=,client= LOG:  database system was shut down at 2015-08-22 01:27:20 EDT
+2015-08-22 02:14:36 EDT [25188]: [2-1] user=,db=,app=,client= LOG:  MultiXact member wraparound protections are now enabled
+2015-08-22 02:14:36 EDT [25187]: [1-1] user=,db=,app=,client= LOG:  database system is ready to accept connections
+2015-08-22 02:14:36 EDT [25193]: [1-1] user=,db=,app=,client= LOG:  autovacuum launcher started
+2015-08-22 02:15:09 EDT [25211]: [1-1] user=mark,db=dbt3,app=pgxc,client=10.93.131.148 WARNING:  Expected to see a snapshot sent by the coordinator  - now taking a direct snapshot from GTM
+2015-08-22 02:15:25 EDT [25216]: [1-1] user=mark,db=dbt3,app=pgxc,client=10.93.131.148 WARNING:  Expected to see a snapshot sent by the coordinator  - now taking a direct snapshot from GTM
+2015-08-22 02:16:35 EDT [25235]: [1-1] user=mark,db=dbt3,app=pgxc,client=10.93.131.148 WARNING:  Expected to see a snapshot sent by the coordinator  - now taking a direct snapshot from GTM
+2015-08-22 02:18:28 EDT [25265]: [1-1] user=mark,db=dbt3,app=pgxc,client=10.93.131.148 WARNING:  Expected to see a snapshot sent by the coordinator  - now taking a direct snapshot from GTM
+2015-08-22 02:19:37 EDT [25190]: [1-1] user=,db=,app=,client= LOG:  checkpoint starting: time
+2015-08-22 02:20:30 EDT [25229]: [1-1] user=mark,db=dbt3,app=pgxc,client=10.93.131.148 LOG:  sending cancel to blocking autovacuum PID 25276
+2015-08-22 02:20:30 EDT [25229]: [2-1] user=mark,db=dbt3,app=pgxc,client=10.93.131.148 DETAIL:  Process 25229 waits for ShareLock on relation 16579 of database 16392.
+2015-08-22 02:20:30 EDT [25229]: [3-1] user=mark,db=dbt3,app=pgxc,client=10.93.131.148 STATEMENT:  
+	CREATE INDEX part_p_size_idx
+	ON part(p_size);
+2015-08-22 02:20:30 EDT [25229]: [4-1] user=mark,db=dbt3,app=pgxc,client=10.93.131.148 LOG:  process 25229 still waiting for ShareLock on relation 16579 of database 16392 after 1000.155 ms
+2015-08-22 02:20:30 EDT [25229]: [5-1] user=mark,db=dbt3,app=pgxc,client=10.93.131.148 DETAIL:  Process holding the lock: 25276. Wait queue: 25229, 25228, 25249.
+2015-08-22 02:20:30 EDT [25229]: [6-1] user=mark,db=dbt3,app=pgxc,client=10.93.131.148 STATEMENT:  
+	CREATE INDEX part_p_size_idx
+	ON part(p_size);
+2015-08-22 02:20:30 EDT [25276]: [1-1] user=,db=,app=,client= ERROR:  canceling autovacuum task
+2015-08-22 02:20:30 EDT [25276]: [2-1] user=,db=,app=,client= CONTEXT:  automatic analyze of table "dbt3.public.part"
+2015-08-22 02:20:30 EDT [25229]: [7-1] user=mark,db=dbt3,app=pgxc,client=10.93.131.148 LOG:  process 25229 acquired ShareLock on relation 16579 of database 16392 after 1000.272 ms
+2015-08-22 02:20:30 EDT [25229]: [8-1] user=mark,db=dbt3,app=pgxc,client=10.93.131.148 STATEMENT:  
+	CREATE INDEX part_p_size_idx
+	ON part(p_size);
+2015-08-22 02:20:52 EDT [25190]: [2-1] user=,db=,app=,client= LOG:  checkpoint complete: wrote 44471 buffers (4.2%); 0 transaction log file(s) added, 0 removed, 0 recycled; write=67.538 s, sync=7.154 s, total=75.210 s; sync files=50, longest=2.593 s, average=0.143 s; distance=3059518 kB, estimate=3059518 kB
+2015-08-22 02:21:32 EDT [25249]: [1-1] user=mark,db=dbt3,app=pgxc,client=10.93.131.148 LOG:  sending cancel to blocking autovacuum PID 25300
+2015-08-22 02:21:32 EDT [25249]: [2-1] user=mark,db=dbt3,app=pgxc,client=10.93.131.148 DETAIL:  Process 25249 waits for ShareLock on relation 16576 of database 16392.
+2015-08-22 02:21:32 EDT [25249]: [3-1] user=mark,db=dbt3,app=pgxc,client=10.93.131.148 STATEMENT:  
+	CREATE INDEX supplier_s_nationkey_s_suppkey_idx
+	ON supplier (s_nationkey, s_suppkey);
+2015-08-22 02:21:32 EDT [25249]: [4-1] user=mark,db=dbt3,app=pgxc,client=10.93.131.148 LOG:  process 25249 still waiting for ShareLock on relation 16576 of database 16392 after 1000.603 ms
+2015-08-22 02:21:32 EDT [25249]: [5-1] user=mark,db=dbt3,app=pgxc,client=10.93.131.148 DETAIL:  Process holding the lock: 25300. Wait queue: 25249, 25265.
+2015-08-22 02:21:32 EDT [25249]: [6-1] user=mark,db=dbt3,app=pgxc,client=10.93.131.148 STATEMENT:  
+	CREATE INDEX supplier_s_nationkey_s_suppkey_idx
+	ON supplier (s_nationkey, s_suppkey);
+2015-08-22 02:21:33 EDT [25265]: [2-1] user=mark,db=dbt3,app=pgxc,client=10.93.131.148 LOG:  sending cancel to blocking autovacuum PID 25300
+2015-08-22 02:21:33 EDT [25265]: [3-1] user=mark,db=dbt3,app=pgxc,client=10.93.131.148 DETAIL:  Process 25265 waits for ShareLock on relation 16576 of database 16392.
+2015-08-22 02:21:33 EDT [25265]: [4-1] user=mark,db=dbt3,app=pgxc,client=10.93.131.148 STATEMENT:  
+	CREATE INDEX supplier_s_suppkey_idx_like
+	ON supplier (s_suppkey)
+	WHERE s_comment LIKE '%Customer%Complaints%';
+2015-08-22 02:21:33 EDT [25265]: [5-1] user=mark,db=dbt3,app=pgxc,client=10.93.131.148 LOG:  process 25265 still waiting for ShareLock on relation 16576 of database 16392 after 1000.146 ms
+2015-08-22 02:21:33 EDT [25265]: [6-1] user=mark,db=dbt3,app=pgxc,client=10.93.131.148 DETAIL:  Process holding the lock: 25300. Wait queue: 25249, 25265.
+2015-08-22 02:21:33 EDT [25265]: [7-1] user=mark,db=dbt3,app=pgxc,client=10.93.131.148 STATEMENT:  
+	CREATE INDEX supplier_s_suppkey_idx_like
+	ON supplier (s_suppkey)
+	WHERE s_comment LIKE '%Customer%Complaints%';
+2015-08-22 02:21:37 EDT [25300]: [1-1] user=,db=,app=,client= ERROR:  canceling autovacuum task
+2015-08-22 02:21:37 EDT [25300]: [2-1] user=,db=,app=,client= CONTEXT:  automatic analyze of table "dbt3.public.supplier"
+2015-08-22 02:21:37 EDT [25265]: [8-1] user=mark,db=dbt3,app=pgxc,client=10.93.131.148 LOG:  process 25265 acquired ShareLock on relation 16576 of database 16392 after 5362.391 ms
+2015-08-22 02:21:37 EDT [25265]: [9-1] user=mark,db=dbt3,app=pgxc,client=10.93.131.148 STATEMENT:  
+	CREATE INDEX supplier_s_suppkey_idx_like
+	ON supplier (s_suppkey)
+	WHERE s_comment LIKE '%Customer%Complaints%';
+2015-08-22 02:21:37 EDT [25249]: [7-1] user=mark,db=dbt3,app=pgxc,client=10.93.131.148 LOG:  process 25249 acquired ShareLock on relation 16576 of database 16392 after 6324.671 ms
+2015-08-22 02:21:37 EDT [25249]: [8-1] user=mark,db=dbt3,app=pgxc,client=10.93.131.148 STATEMENT:  
+	CREATE INDEX supplier_s_nationkey_s_suppkey_idx
+	ON supplier (s_nationkey, s_suppkey);
+2015-08-22 02:22:12 EDT [25265]: [10-1] user=mark,db=dbt3,app=pgxc,client=10.93.131.148 LOG:  sending cancel to blocking autovacuum PID 25307
+2015-08-22 02:22:12 EDT [25265]: [11-1] user=mark,db=dbt3,app=pgxc,client=10.93.131.148 DETAIL:  Process 25265 waits for ShareUpdateExclusiveLock on relation 16576 of database 16392.
+2015-08-22 02:22:12 EDT [25265]: [12-1] user=mark,db=dbt3,app=pgxc,client=10.93.131.148 STATEMENT:  VACUUM ANALYZE supplier;
+2015-08-22 02:22:12 EDT [25265]: [13-1] user=mark,db=dbt3,app=pgxc,client=10.93.131.148 LOG:  process 25265 still waiting for ShareUpdateExclusiveLock on relation 16576 of database 16392 after 1000.283 ms
+2015-08-22 02:22:12 EDT [25265]: [14-1] user=mark,db=dbt3,app=pgxc,client=10.93.131.148 DETAIL:  Process holding the lock: 25307. Wait queue: 25265.
+2015-08-22 02:22:12 EDT [25265]: [15-1] user=mark,db=dbt3,app=pgxc,client=10.93.131.148 STATEMENT:  VACUUM ANALYZE supplier;
+2015-08-22 02:22:29 EDT [25307]: [1-1] user=,db=,app=,client= ERROR:  canceling autovacuum task
+2015-08-22 02:22:29 EDT [25307]: [2-1] user=,db=,app=,client= CONTEXT:  automatic analyze of table "dbt3.public.supplier"
+2015-08-22 02:22:29 EDT [25265]: [16-1] user=mark,db=dbt3,app=pgxc,client=10.93.131.148 LOG:  process 25265 acquired ShareUpdateExclusiveLock on relation 16576 of database 16392 after 17770.951 ms
+2015-08-22 02:22:29 EDT [25265]: [17-1] user=mark,db=dbt3,app=pgxc,client=10.93.131.148 STATEMENT:  VACUUM ANALYZE supplier;
+2015-08-22 02:24:37 EDT [25190]: [3-1] user=,db=,app=,client= LOG:  checkpoint starting: time
+2015-08-22 02:26:04 EDT [25190]: [4-1] user=,db=,app=,client= LOG:  checkpoint complete: wrote 48284 buffers (4.6%); 0 transaction log file(s) added, 0 removed, 186 recycled; write=80.914 s, sync=5.987 s, total=87.349 s; sync files=45, longest=2.218 s, average=0.133 s; distance=3048604 kB, estimate=3058427 kB
+2015-08-22 02:26:44 EDT [25260]: [1-1] user=mark,db=dbt3,app=pgxc,client=10.93.131.148 LOG:  sending cancel to blocking autovacuum PID 25321
+2015-08-22 02:26:44 EDT [25260]: [2-1] user=mark,db=dbt3,app=pgxc,client=10.93.131.148 DETAIL:  Process 25260 waits for ShareLock on relation 16582 of database 16392.
+2015-08-22 02:26:44 EDT [25260]: [3-1] user=mark,db=dbt3,app=pgxc,client=10.93.131.148 STATEMENT:  
+	CREATE INDEX partsupp_ps_suppkey_idx
+	ON partsupp (ps_suppkey) ;
+2015-08-22 02:26:44 EDT [25260]: [4-1] user=mark,db=dbt3,app=pgxc,client=10.93.131.148 LOG:  process 25260 still waiting for ShareLock on relation 16582 of database 16392 after 1000.236 ms
+2015-08-22 02:26:44 EDT [25260]: [5-1] user=mark,db=dbt3,app=pgxc,client=10.93.131.148 DETAIL:  Process holding the lock: 25321. Wait queue: 25260.
+2015-08-22 02:26:44 EDT [25260]: [6-1] user=mark,db=dbt3,app=pgxc,client=10.93.131.148 STATEMENT:  
+	CREATE INDEX partsupp_ps_suppkey_idx
+	ON partsupp (ps_suppkey) ;
+2015-08-22 02:26:44 EDT [25321]: [1-1] user=,db=,app=,client= ERROR:  canceling autovacuum task
+2015-08-22 02:26:44 EDT [25321]: [2-1] user=,db=,app=,client= CONTEXT:  automatic analyze of table "dbt3.public.partsupp"
+2015-08-22 02:26:44 EDT [25260]: [7-1] user=mark,db=dbt3,app=pgxc,client=10.93.131.148 LOG:  process 25260 acquired ShareLock on relation 16582 of database 16392 after 1000.350 ms
+2015-08-22 02:26:44 EDT [25260]: [8-1] user=mark,db=dbt3,app=pgxc,client=10.93.131.148 STATEMENT:  
+	CREATE INDEX partsupp_ps_suppkey_idx
+	ON partsupp (ps_suppkey) ;
+2015-08-22 02:28:50 EDT [25261]: [1-1] user=mark,db=dbt3,app=pgxc,client=10.93.131.148 LOG:  sending cancel to blocking autovacuum PID 25336
+2015-08-22 02:28:50 EDT [25261]: [2-1] user=mark,db=dbt3,app=pgxc,client=10.93.131.148 DETAIL:  Process 25261 waits for ShareLock on relation 16585 of database 16392.
+2015-08-22 02:28:50 EDT [25261]: [3-1] user=mark,db=dbt3,app=pgxc,client=10.93.131.148 STATEMENT:  
+	CREATE INDEX customer_c_mktsegment_c_custkey_idx
+	ON customer (c_mktsegment, c_custkey);
+2015-08-22 02:28:50 EDT [25261]: [4-1] user=mark,db=dbt3,app=pgxc,client=10.93.131.148 LOG:  process 25261 still waiting for ShareLock on relation 16585 of database 16392 after 1000.186 ms
+2015-08-22 02:28:50 EDT [25261]: [5-1] user=mark,db=dbt3,app=pgxc,client=10.93.131.148 DETAIL:  Process holding the lock: 25336. Wait queue: 25261, 25264, 25253.
+2015-08-22 02:28:50 EDT [25261]: [6-1] user=mark,db=dbt3,app=pgxc,client=10.93.131.148 STATEMENT:  
+	CREATE INDEX customer_c_mktsegment_c_custkey_idx
+	ON customer (c_mktsegment, c_custkey);
+2015-08-22 02:28:50 EDT [25336]: [1-1] user=,db=,app=,client= ERROR:  canceling autovacuum task
+2015-08-22 02:28:50 EDT [25336]: [2-1] user=,db=,app=,client= CONTEXT:  automatic analyze of table "dbt3.public.customer"
+2015-08-22 02:28:50 EDT [25261]: [7-1] user=mark,db=dbt3,app=pgxc,client=10.93.131.148 LOG:  process 25261 acquired ShareLock on relation 16585 of database 16392 after 1000.313 ms
+2015-08-22 02:28:50 EDT [25261]: [8-1] user=mark,db=dbt3,app=pgxc,client=10.93.131.148 STATEMENT:  
+	CREATE INDEX customer_c_mktsegment_c_custkey_idx
+	ON customer (c_mktsegment, c_custkey);
+2015-08-22 02:29:20 EDT [25358]: [1-1] user=,db=,app=,client= LOG:  using stale statistics instead of current ones because stats collector is not responding
+2015-08-22 02:29:27 EDT [25263]: [1-1] user=mark,db=dbt3,app=pgxc,client=10.93.131.148 LOG:  sending cancel to blocking autovacuum PID 25328
+2015-08-22 02:29:27 EDT [25263]: [2-1] user=mark,db=dbt3,app=pgxc,client=10.93.131.148 DETAIL:  Process 25263 waits for ShareLock on relation 16588 of database 16392.
+2015-08-22 02:29:27 EDT [25263]: [3-1] user=mark,db=dbt3,app=pgxc,client=10.93.131.148 STATEMENT:  
+	CREATE INDEX orders_o_orderkey_o_orderdate_idx
+	ON orders (o_orderkey, o_orderdate);
+2015-08-22 02:29:27 EDT [25263]: [4-1] user=mark,db=dbt3,app=pgxc,client=10.93.131.148 LOG:  process 25263 still waiting for ShareLock on relation 16588 of database 16392 after 1000.186 ms
+2015-08-22 02:29:27 EDT [25263]: [5-1] user=mark,db=dbt3,app=pgxc,client=10.93.131.148 DETAIL:  Process holding the lock: 25328. Wait queue: 25263.
+2015-08-22 02:29:27 EDT [25263]: [6-1] user=mark,db=dbt3,app=pgxc,client=10.93.131.148 STATEMENT:  
+	CREATE INDEX orders_o_orderkey_o_orderdate_idx
+	ON orders (o_orderkey, o_orderdate);
+2015-08-22 02:29:27 EDT [25328]: [1-1] user=,db=,app=,client= ERROR:  canceling autovacuum task
+2015-08-22 02:29:27 EDT [25328]: [2-1] user=,db=,app=,client= CONTEXT:  automatic analyze of table "dbt3.public.orders"
+2015-08-22 02:29:27 EDT [25263]: [7-1] user=mark,db=dbt3,app=pgxc,client=10.93.131.148 LOG:  process 25263 acquired ShareLock on relation 16588 of database 16392 after 1000.323 ms
+2015-08-22 02:29:27 EDT [25263]: [8-1] user=mark,db=dbt3,app=pgxc,client=10.93.131.148 STATEMENT:  
+	CREATE INDEX orders_o_orderkey_o_orderdate_idx
+	ON orders (o_orderkey, o_orderdate);
+2015-08-22 02:29:37 EDT [25190]: [5-1] user=,db=,app=,client= LOG:  checkpoint starting: time
+2015-08-22 02:32:02 EDT [25190]: [6-1] user=,db=,app=,client= LOG:  checkpoint complete: wrote 220170 buffers (21.0%); 0 transaction log file(s) added, 0 removed, 186 recycled; write=142.352 s, sync=2.500 s, total=145.007 s; sync files=41, longest=1.260 s, average=0.060 s; distance=2773586 kB, estimate=3029943 kB
+2015-08-22 02:34:06 EDT [25403]: [1-1] user=,db=,app=,client= LOG:  autovacuum: found orphan temp table "pg_temp_4"."tmp_orderkey4" in database "dbt3"
+2015-08-22 02:34:38 EDT [25190]: [7-1] user=,db=,app=,client= LOG:  checkpoint starting: time
+2015-08-22 02:34:59 EDT [25190]: [8-1] user=,db=,app=,client= LOG:  checkpoint complete: wrote 2275 buffers (0.2%); 0 transaction log file(s) added, 0 removed, 170 recycled; write=20.175 s, sync=1.170 s, total=21.421 s; sync files=31, longest=0.830 s, average=0.037 s; distance=2205611 kB, estimate=2947510 kB
+2015-08-22 02:35:06 EDT [25412]: [1-1] user=,db=,app=,client= LOG:  autovacuum: found orphan temp table "pg_temp_4"."tmp_orderkey4" in database "dbt3"
+2015-08-22 02:36:06 EDT [25419]: [1-1] user=,db=,app=,client= LOG:  autovacuum: found orphan temp table "pg_temp_2"."tmp_orderkey2" in database "dbt3"
+2015-08-22 02:36:06 EDT [25419]: [2-1] user=,db=,app=,client= LOG:  autovacuum: found orphan temp table "pg_temp_4"."tmp_orderkey4" in database "dbt3"
+2015-08-22 02:37:06 EDT [25445]: [1-1] user=,db=,app=,client= LOG:  autovacuum: found orphan temp table "pg_temp_2"."tmp_orderkey2" in database "dbt3"
+2015-08-22 02:37:06 EDT [25445]: [2-1] user=,db=,app=,client= LOG:  autovacuum: found orphan temp table "pg_temp_4"."tmp_orderkey4" in database "dbt3"
+2015-08-22 02:38:06 EDT [25486]: [1-1] user=,db=,app=,client= LOG:  autovacuum: found orphan temp table "pg_temp_2"."tmp_orderkey2" in database "dbt3"
+2015-08-22 02:38:06 EDT [25486]: [2-1] user=,db=,app=,client= LOG:  autovacuum: found orphan temp table "pg_temp_4"."tmp_orderkey4" in database "dbt3"
+2015-08-22 02:39:06 EDT [25535]: [1-1] user=,db=,app=,client= LOG:  autovacuum: found orphan temp table "pg_temp_2"."tmp_orderkey2" in database "dbt3"
+2015-08-22 02:39:06 EDT [25535]: [2-1] user=,db=,app=,client= LOG:  autovacuum: found orphan temp table "pg_temp_4"."tmp_orderkey4" in database "dbt3"
+2015-08-22 02:39:38 EDT [25190]: [9-1] user=,db=,app=,client= LOG:  checkpoint starting: time
+2015-08-22 02:39:58 EDT [25190]: [10-1] user=,db=,app=,client= LOG:  checkpoint complete: wrote 2139 buffers (0.2%); 0 transaction log file(s) added, 0 removed, 134 recycled; write=18.871 s, sync=0.552 s, total=19.465 s; sync files=8, longest=0.539 s, average=0.069 s; distance=2089427 kB, estimate=2861701 kB
+2015-08-22 02:40:06 EDT [25585]: [1-1] user=,db=,app=,client= LOG:  autovacuum: found orphan temp table "pg_temp_4"."tmp_orderkey4" in database "dbt3"
+2015-08-22 02:41:06 EDT [25592]: [1-1] user=,db=,app=,client= LOG:  autovacuum: found orphan temp table "pg_temp_4"."tmp_orderkey4" in database "dbt3"
+2015-08-22 02:42:06 EDT [25599]: [1-1] user=,db=,app=,client= LOG:  autovacuum: found orphan temp table "pg_temp_4"."tmp_orderkey4" in database "dbt3"
+2015-08-22 02:43:06 EDT [25608]: [1-1] user=,db=,app=,client= LOG:  autovacuum: found orphan temp table "pg_temp_4"."tmp_orderkey4" in database "dbt3"
+2015-08-22 02:44:06 EDT [25615]: [1-1] user=,db=,app=,client= LOG:  autovacuum: found orphan temp table "pg_temp_4"."tmp_orderkey4" in database "dbt3"
+2015-08-22 02:44:38 EDT [25190]: [11-1] user=,db=,app=,client= LOG:  checkpoint starting: time
+2015-08-22 02:45:06 EDT [25624]: [1-1] user=,db=,app=,client= LOG:  autovacuum: found orphan temp table "pg_temp_4"."tmp_orderkey4" in database "dbt3"
+2015-08-22 02:46:16 EDT [25193]: [2-1] user=,db=,app=,client= LOG:  using stale statistics instead of current ones because stats collector is not responding
+2015-08-22 02:46:26 EDT [25631]: [1-1] user=,db=,app=,client= LOG:  using stale statistics instead of current ones because stats collector is not responding
+2015-08-22 02:46:26 EDT [25631]: [2-1] user=,db=,app=,client= LOG:  autovacuum: found orphan temp table "pg_temp_4"."tmp_orderkey4" in database "dbt3"
+2015-08-22 02:46:37 EDT [25631]: [3-1] user=,db=,app=,client= LOG:  using stale statistics instead of current ones because stats collector is not responding
+2015-08-22 02:46:47 EDT [25631]: [4-1] user=,db=,app=,client= LOG:  using stale statistics instead of current ones because stats collector is not responding
+2015-08-22 02:47:00 EDT [25638]: [1-1] user=,db=,app=,client= LOG:  using stale statistics instead of current ones because stats collector is not responding
+2015-08-22 02:47:01 EDT [25635]: [1-1] user=mark,db=dbt3,app=psql,client=10.93.131.148 LOG:  using stale statistics instead of current ones because stats collector is not responding
+2015-08-22 02:47:01 EDT [25635]: [2-1] user=mark,db=dbt3,app=psql,client=10.93.131.148 STATEMENT:  COPY (SELECT EXTRACT(EPOCH FROM TRANSACTION_TIMESTAMP()) AS ctime, a.schemaname, a.relname, seq_scan, seq_tup_read, idx_scan, idx_tup_fetch, n_tup_ins, n_tup_upd, n_tup_del, n_tup_hot_upd, n_live_tup, n_dead_tup, heap_blks_read, heap_blks_hit, idx_blks_read, idx_blks_hit, toast_blks_read, toast_blks_hit, tidx_blks_read, tidx_blks_hit FROM pg_statio_all_tables a, pg_stat_all_tables b WHERE a.relid = b.relid) TO STDOUT (FORMAT CSV);
+2015-08-22 02:47:01 EDT [25636]: [1-1] user=mark,db=dbt3,app=psql,client=10.93.131.148 LOG:  using stale statistics instead of current ones because stats collector is not responding
+2015-08-22 02:47:01 EDT [25636]: [2-1] user=mark,db=dbt3,app=psql,client=10.93.131.148 STATEMENT:  COPY (SELECT EXTRACT(EPOCH FROM TRANSACTION_TIMESTAMP()) AS ctime, a.schemaname, a.relname, a.indexrelname, idx_scan, idx_tup_read, idx_tup_fetch, idx_blks_read, idx_blks_hit FROM pg_stat_all_indexes a, pg_statio_all_indexes b WHERE a.indexrelid = b.indexrelid) TO STDOUT (FORMAT CSV);
+2015-08-22 02:47:01 EDT [25634]: [1-1] user=mark,db=dbt3,app=psql,client=10.93.131.148 LOG:  using stale statistics instead of current ones because stats collector is not responding
+2015-08-22 02:47:01 EDT [25634]: [2-1] user=mark,db=dbt3,app=psql,client=10.93.131.148 STATEMENT:  COPY (SELECT EXTRACT(EPOCH FROM TRANSACTION_TIMESTAMP()) AS ctime, numbackends, xact_commit, xact_rollback, blks_read, blks_hit, tup_returned, tup_fetched, tup_inserted, tup_updated, tup_deleted FROM pg_stat_database) TO STDOUT (FORMAT CSV);
+2015-08-22 02:47:09 EDT [25639]: [1-1] user=,db=,app=,client= LOG:  autovacuum: found orphan temp table "pg_temp_4"."tmp_orderkey4" in database "dbt3"
+2015-08-22 02:47:47 EDT [25190]: [12-1] user=,db=,app=,client= LOG:  checkpoint complete: wrote 7754 buffers (0.7%); 0 transaction log file(s) added, 0 removed, 128 recycled; write=70.493 s, sync=116.188 s, total=189.176 s; sync files=12, longest=23.625 s, average=9.681 s; distance=2115411 kB, estimate=2787072 kB
+2015-08-22 02:48:06 EDT [25646]: [1-1] user=,db=,app=,client= LOG:  autovacuum: found orphan temp table "pg_temp_2"."tmp_orderkey2" in database "dbt3"
+2015-08-22 02:48:06 EDT [25646]: [2-1] user=,db=,app=,client= LOG:  autovacuum: found orphan temp table "pg_temp_4"."tmp_orderkey4" in database "dbt3"
+2015-08-22 02:49:06 EDT [25653]: [1-1] user=,db=,app=,client= LOG:  autovacuum: found orphan temp table "pg_temp_2"."tmp_orderkey2" in database "dbt3"
+2015-08-22 02:49:06 EDT [25653]: [2-1] user=,db=,app=,client= LOG:  autovacuum: found orphan temp table "pg_temp_4"."tmp_orderkey4" in database "dbt3"
+2015-08-22 02:49:38 EDT [25190]: [13-1] user=,db=,app=,client= LOG:  checkpoint starting: time
+2015-08-22 02:50:06 EDT [25661]: [1-1] user=,db=,app=,client= LOG:  autovacuum: found orphan temp table "pg_temp_2"."tmp_orderkey2" in database "dbt3"
+2015-08-22 02:50:06 EDT [25661]: [2-1] user=,db=,app=,client= LOG:  autovacuum: found orphan temp table "pg_temp_4"."tmp_orderkey4" in database "dbt3"
+2015-08-22 02:51:06 EDT [25675]: [1-1] user=,db=,app=,client= LOG:  autovacuum: found orphan temp table "pg_temp_2"."tmp_orderkey2" in database "dbt3"
+2015-08-22 02:51:06 EDT [25675]: [2-1] user=,db=,app=,client= LOG:  autovacuum: found orphan temp table "pg_temp_4"."tmp_orderkey4" in database "dbt3"
+2015-08-22 02:52:06 EDT [25685]: [1-1] user=,db=,app=,client= LOG:  autovacuum: found orphan temp table "pg_temp_2"."tmp_orderkey2" in database "dbt3"
+2015-08-22 02:52:06 EDT [25685]: [2-1] user=,db=,app=,client= LOG:  autovacuum: found orphan temp table "pg_temp_4"."tmp_orderkey4" in database "dbt3"
+2015-08-22 02:52:08 EDT [25190]: [14-1] user=,db=,app=,client= LOG:  checkpoint complete: wrote 17499 buffers (1.7%); 0 transaction log file(s) added, 0 removed, 129 recycled; write=149.435 s, sync=0.070 s, total=149.632 s; sync files=31, longest=0.040 s, average=0.002 s; distance=297115 kB, estimate=2538077 kB
+2015-08-22 02:53:06 EDT [25692]: [1-1] user=,db=,app=,client= LOG:  autovacuum: found orphan temp table "pg_temp_2"."tmp_orderkey2" in database "dbt3"
+2015-08-22 02:53:06 EDT [25692]: [2-1] user=,db=,app=,client= LOG:  autovacuum: found orphan temp table "pg_temp_4"."tmp_orderkey4" in database "dbt3"
+2015-08-22 02:54:07 EDT [25699]: [1-1] user=,db=,app=,client= LOG:  autovacuum: found orphan temp table "pg_temp_2"."tmp_orderkey2" in database "dbt3"
+2015-08-22 02:54:07 EDT [25699]: [2-1] user=,db=,app=,client= LOG:  autovacuum: found orphan temp table "pg_temp_4"."tmp_orderkey4" in database "dbt3"
+2015-08-22 02:54:38 EDT [25190]: [15-1] user=,db=,app=,client= LOG:  checkpoint starting: time
+2015-08-22 02:55:06 EDT [25706]: [1-1] user=,db=,app=,client= LOG:  autovacuum: found orphan temp table "pg_temp_2"."tmp_orderkey2" in database "dbt3"
+2015-08-22 02:55:06 EDT [25706]: [2-1] user=,db=,app=,client= LOG:  autovacuum: found orphan temp table "pg_temp_4"."tmp_orderkey4" in database "dbt3"
+2015-08-22 02:56:06 EDT [25713]: [1-1] user=,db=,app=,client= LOG:  autovacuum: found orphan temp table "pg_temp_2"."tmp_orderkey2" in database "dbt3"
+2015-08-22 02:56:06 EDT [25713]: [2-1] user=,db=,app=,client= LOG:  autovacuum: found orphan temp table "pg_temp_4"."tmp_orderkey4" in database "dbt3"
+2015-08-22 02:57:06 EDT [25723]: [1-1] user=,db=,app=,client= LOG:  autovacuum: found orphan temp table "pg_temp_2"."tmp_orderkey2" in database "dbt3"
+2015-08-22 02:57:06 EDT [25723]: [2-1] user=,db=,app=,client= LOG:  autovacuum: found orphan temp table "pg_temp_4"."tmp_orderkey4" in database "dbt3"
+2015-08-22 02:57:06 EDT [25190]: [16-1] user=,db=,app=,client= LOG:  checkpoint complete: wrote 3946 buffers (0.4%); 0 transaction log file(s) added, 18 removed, 0 recycled; write=148.524 s, sync=0.022 s, total=148.557 s; sync files=17, longest=0.017 s, average=0.001 s; distance=56398 kB, estimate=2289909 kB
+2015-08-22 02:58:06 EDT [25764]: [1-1] user=,db=,app=,client= LOG:  autovacuum: found orphan temp table "pg_temp_2"."tmp_orderkey2" in database "dbt3"
+2015-08-22 02:58:06 EDT [25764]: [2-1] user=,db=,app=,client= LOG:  autovacuum: found orphan temp table "pg_temp_4"."tmp_orderkey4" in database "dbt3"
+2015-08-22 02:58:28 EDT [25187]: [2-1] user=,db=,app=,client= LOG:  received fast shutdown request
+2015-08-22 02:58:28 EDT [25187]: [3-1] user=,db=,app=,client= LOG:  aborting any active transactions
+2015-08-22 02:58:28 EDT [25193]: [3-1] user=,db=,app=,client= LOG:  autovacuum launcher shutting down
+2015-08-22 02:58:28 EDT [25190]: [17-1] user=,db=,app=,client= LOG:  shutting down
+2015-08-22 02:58:28 EDT [25190]: [18-1] user=,db=,app=,client= LOG:  checkpoint starting: shutdown immediate
+2015-08-22 02:58:29 EDT [25190]: [19-1] user=,db=,app=,client= LOG:  checkpoint complete: wrote 22352 buffers (2.1%); 0 transaction log file(s) added, 4 removed, 0 recycled; write=0.135 s, sync=1.578 s, total=1.720 s; sync files=15, longest=1.208 s, average=0.105 s; distance=27934 kB, estimate=2063711 kB
+2015-08-22 02:58:29 EDT [25190]: [20-1] user=,db=,app=,client= LOG:  database system is shut down
